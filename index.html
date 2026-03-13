@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artx · 课程中心</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+</head>
+<body>
+    <!-- 顶部导航栏 (Material App Bar) -->
+    <header class="app-bar">
+        <div class="app-bar-inner">
+            <div class="brand">
+                <img src="assets/logo.png" alt="artx" class="brand-logo">
+            </div>
+            <nav class="nav-rail">
+                <a href="#" class="nav-item active" data-view="home">
+                    <span class="material-icons-outlined">home</span>
+                    <span class="nav-label" data-i18n="nav.home">首页</span>
+                </a>
+                <a href="#" class="nav-item" data-view="about">
+                    <span class="material-icons-outlined">auto_stories</span>
+                    <span class="nav-label" data-i18n="nav.about">体系</span>
+                </a>
+                <a href="#" class="nav-item" data-view="curriculum">
+                    <span class="material-icons-outlined">menu_book</span>
+                    <span class="nav-label" data-i18n="nav.curriculum">大纲</span>
+                </a>
+                <a href="#" class="nav-item" data-view="calendar">
+                    <span class="material-icons-outlined">calendar_month</span>
+                    <span class="nav-label" data-i18n="nav.calendar">课表</span>
+                </a>
+                <button class="lang-toggle" id="lang-toggle" title="Switch Language">
+                    <span class="lang-label">EN</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 首页 -->
+    <main id="view-home" class="view active">
+        <!-- Hero -->
+        <section class="hero-surface">
+            <div class="hero-overlay"></div>
+            <div class="hero-text">
+                <img src="assets/logo.png" alt="artx" class="hero-logo">
+                <p class="title-large" data-i18n="hero.subtitle">让艺术成为孩子的第二语言</p>
+                <p class="body-large hero-sub" data-i18n="hero.desc">artx 是一套为艺术机构打造的专业少儿课程体系——780节课，覆盖4-18岁全年龄段，融合五大国际教育理论。我们以「展览式教学」为核心，每学期结合真实艺术展览，让孩子在观展、解读、创作、策展的完整闭环中螺旋成长。每学期都看得见进步，从涂鸦到独立创作，一步步蜕变。</p>
+                <a href="#" class="hero-cta" data-view="about" data-i18n="hero.cta">了解课程体系</a>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="home-stats">
+            <div class="home-stats-inner">
+                <div class="home-stat">
+                    <span class="home-stat-num">780</span>
+                    <span class="home-stat-label" data-i18n="home.stat1">节系统课程</span>
+                </div>
+                <div class="home-stat">
+                    <span class="home-stat-num">5</span>
+                    <span class="home-stat-label" data-i18n="home.stat2">个年龄段</span>
+                </div>
+                <div class="home-stat">
+                    <span class="home-stat-num">5</span>
+                    <span class="home-stat-label" data-i18n="home.stat3">大教育理论</span>
+                </div>
+                <div class="home-stat">
+                    <span class="home-stat-num">3</span>
+                    <span class="home-stat-label" data-i18n="home.stat4">年螺旋进阶</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs (Age Cards) -->
+        <section class="container">
+            <h2 class="headline-medium section-title">
+                <span data-i18n="home.selectClass">选择班级</span>
+            </h2>
+            <div class="age-grid">
+                <div class="md-card age-card reveal card-red" data-age="4-6" style="--accent: #F0B8D6;">
+                    <div class="card-visual">
+                        <div class="card-visual-text">
+                            <span class="age-num">4-6</span>
+                            <span class="age-suffix" data-i18n="age.suffix">岁</span>
+                        </div>
+                        <span class="card-icon material-icons-outlined">gesture</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="title-medium" data-i18n="class.4-6.name">小小涂鸦班</p>
+                        <p class="body-medium card-desc" data-i18n="class.4-6.desc">感知色彩，释放天性</p>
+                    </div>
+                    <div class="card-action"><span class="material-icons-outlined">arrow_forward</span></div>
+                </div>
+                <div class="md-card age-card reveal card-green" data-age="7-9" style="--accent: #C3D63B;">
+                    <div class="card-visual">
+                        <div class="card-visual-text">
+                            <span class="age-num">7-9</span>
+                            <span class="age-suffix" data-i18n="age.suffix">岁</span>
+                        </div>
+                        <span class="card-icon material-icons-outlined">palette</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="title-medium" data-i18n="class.7-9.name">创意探索班</p>
+                        <p class="body-medium card-desc" data-i18n="class.7-9.desc">基础技法，创意表达</p>
+                    </div>
+                    <div class="card-action"><span class="material-icons-outlined">arrow_forward</span></div>
+                </div>
+                <div class="md-card age-card reveal card-blue" data-age="10-12" style="--accent: #7DD3BF;">
+                    <div class="card-visual">
+                        <div class="card-visual-text">
+                            <span class="age-num">10-12</span>
+                            <span class="age-suffix" data-i18n="age.suffix">岁</span>
+                        </div>
+                        <span class="card-icon material-icons-outlined">brush</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="title-medium" data-i18n="class.10-12.name">技法进阶班</p>
+                        <p class="body-medium card-desc" data-i18n="class.10-12.desc">系统学习，技法提升</p>
+                    </div>
+                    <div class="card-action"><span class="material-icons-outlined">arrow_forward</span></div>
+                </div>
+                <div class="md-card age-card reveal card-purple" data-age="13-15" style="--accent: #59A5E8;">
+                    <div class="card-visual">
+                        <div class="card-visual-text">
+                            <span class="age-num">13-15</span>
+                            <span class="age-suffix" data-i18n="age.suffix">岁</span>
+                        </div>
+                        <span class="card-icon material-icons-outlined">style</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="title-medium" data-i18n="class.13-15.name">风格养成班</p>
+                        <p class="body-medium card-desc" data-i18n="class.13-15.desc">风格探索，独立创作</p>
+                    </div>
+                    <div class="card-action"><span class="material-icons-outlined">arrow_forward</span></div>
+                </div>
+                <div class="md-card age-card reveal card-orange" data-age="16-18" style="--accent: #E860A8;">
+                    <div class="card-visual">
+                        <div class="card-visual-text">
+                            <span class="age-num">16-18</span>
+                            <span class="age-suffix" data-i18n="age.suffix">岁</span>
+                        </div>
+                        <span class="card-icon material-icons-outlined">school</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="title-medium" data-i18n="class.16-18.name">大师预备班</p>
+                        <p class="body-medium card-desc" data-i18n="class.16-18.desc">作品集准备，专业方向</p>
+                    </div>
+                    <div class="card-action"><span class="material-icons-outlined">arrow_forward</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works — 3 Steps -->
+        <section class="home-process reveal">
+            <div class="home-process-inner">
+                <h2 class="home-process-title" data-i18n="home.processTitle">如何开始</h2>
+                <div class="home-process-grid">
+                    <div class="home-process-step">
+                        <span class="process-num">01</span>
+                        <h3 data-i18n="home.step1t">科学测评，精准分班</h3>
+                        <p data-i18n="home.step1d">根据孩子年龄和绘画发展阶段，匹配最适合的班级和起点，确保教学内容与认知水平同步。</p>
+                    </div>
+                    <div class="home-process-step">
+                        <span class="process-num">02</span>
+                        <h3 data-i18n="home.step2t">系统学习，螺旋进阶</h3>
+                        <p data-i18n="home.step2d">每周一节标准化课程，每学期完整主题单元。3年螺旋递进，从基础到高阶，成长清晰可见。</p>
+                    </div>
+                    <div class="home-process-step">
+                        <span class="process-num">03</span>
+                        <h3 data-i18n="home.step3t">作品输出，能力沉淀</h3>
+                        <p data-i18n="home.step3d">每节课都有创作成果，每学期形成作品集。不只是画画——观察力、审美力、批判性思维全面提升。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Feature (image + text split) -->
+        <section class="home-feature reveal">
+            <div class="home-feature-img">
+                <img src="assets/gallery.JPG" alt="artx gallery">
+            </div>
+            <div class="home-feature-text">
+                <h2 data-i18n="home.featureTitle">不只是画画</h2>
+                <p data-i18n="home.featureDesc">artx 的每一节课都融合五大国际教育理论——Lowenfeld 发展阶段论、DBAE 学科式艺术教育、Reggio Emilia、STEAM 跨学科整合、Project Zero 思维例程。我们培养的不只是技法，更是观察力、审美力与批判性思维。</p>
+                <a href="#" class="home-feature-link" data-view="about" data-i18n="home.featureLink">了解教育理论 →</a>
+            </div>
+        </section>
+
+        <!-- Testimonials / Social Proof -->
+        <section class="home-testimonials reveal">
+            <div class="home-testimonials-inner">
+                <h2 class="home-testimonials-title" data-i18n="home.testimonialsTitle">家长和机构怎么说</h2>
+                <div class="home-testimonial-grid">
+                    <div class="home-testimonial-card">
+                        <p class="testimonial-quote" data-i18n="home.quote1">"以前给孩子报的兴趣班都是跟着画，画完就忘了。artx 不一样——每节课都有观察、讨论、思考的环节，孩子现在看到一幅画会主动说'我觉得这个颜色有什么含义'。这种变化让我很惊喜。"</p>
+                        <div class="testimonial-author">
+                            <span class="testimonial-name" data-i18n="home.quote1author">— 乐乐妈妈，7岁学员家长</span>
+                        </div>
+                    </div>
+                    <div class="home-testimonial-card">
+                        <p class="testimonial-quote" data-i18n="home.quote2">"引入 artx 体系后，我们的课程品质有了质的飞跃。标准化教案让新老师也能快速上手，家长续费率从 60% 提升到了 85%。最重要的是，每节课都有理论支撑，不再是凭感觉教学。"</p>
+                        <div class="testimonial-author">
+                            <span class="testimonial-name" data-i18n="home.quote2author">— 张老师，合作机构教学总监</span>
+                        </div>
+                    </div>
+                    <div class="home-testimonial-card">
+                        <p class="testimonial-quote" data-i18n="home.quote3">"女儿从 4 岁开始上 artx 的课，现在 10 岁了。6年下来最让我感动的不是她画得多好，而是她学会了观察世界的方式——去博物馆会自己分析构图，看电影会讨论色彩。这才是真正的艺术教育。"</p>
+                        <div class="testimonial-author">
+                            <span class="testimonial-name" data-i18n="home.quote3author">— 小雨爸爸，10岁学员家长</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Theory Tags -->
+        <section class="home-theories">
+            <div class="home-theories-inner" data-i18n-html="hero.theories">
+                <span class="theory-tag">Lowenfeld 发展阶段论</span>
+                <span class="theory-tag">DBAE 学科式艺术教育</span>
+                <span class="theory-tag">Reggio Emilia 瑞吉欧</span>
+                <span class="theory-tag">STEAM 跨学科整合</span>
+                <span class="theory-tag">Project Zero 思维例程</span>
+            </div>
+        </section>
+
+        <!-- Dual CTA -->
+        <section class="home-cta-section reveal">
+            <div class="home-cta-grid">
+                <div class="home-cta-card">
+                    <span class="material-icons-outlined">family_restroom</span>
+                    <h3 data-i18n="home.ctaParentTitle">为孩子选择最好的艺术启蒙</h3>
+                    <p data-i18n="home.ctaParentDesc">780节课覆盖4-18岁，系统化学习路径，看得见成长。</p>
+                </div>
+                <div class="home-cta-card">
+                    <span class="material-icons-outlined">handshake</span>
+                    <h3 data-i18n="home.ctaOrgTitle">机构合作：即插即用的课程体系</h3>
+                    <p data-i18n="home.ctaOrgDesc">完整教研输出，标准化教案，提升教学品质与品牌竞争力。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 课程体系介绍页 -->
+    <main id="view-about" class="view">
+        <section class="container about-page">
+
+            <!-- Hero 数据总览 -->
+            <div class="about-hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">780</span>
+                    <span class="stat-label" data-i18n="about.stat1">节系统课程</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">5</span>
+                    <span class="stat-label" data-i18n="about.stat2">个年龄段覆盖</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">3</span>
+                    <span class="stat-label" data-i18n="about.stat3">年螺旋进阶</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">5</span>
+                    <span class="stat-label" data-i18n="about.stat4">大教育理论</span>
+                </div>
+            </div>
+
+            <!-- 一句话价值主张 -->
+            <div class="about-value reveal">
+                <h2 class="about-headline" data-i18n="about.headline">不是兴趣班，是一套完整的艺术成长体系</h2>
+                <p class="about-value-desc" data-i18n="about.valueDesc">artx 课程由专业艺术教育团队研发，基于五大国际权威教育理论，为 4-18 岁学员构建了一套从启蒙到专业的完整学习路径。每一节课都经过精心设计——不只是教孩子"画画"，而是培养观察力、审美力、创造力与批判性思维。</p>
+            </div>
+
+            <!-- 为什么选择 artx -->
+            <div class="about-section reveal">
+                <h3 class="about-section-title">
+                    <span class="material-icons-outlined">diamond</span>
+                    <span data-i18n="about.whyTitle">为什么选择 artx？</span>
+                </h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon material-icons-outlined">psychology</span>
+                        <h4 data-i18n="about.f1t">科学分龄，精准匹配</h4>
+                        <p data-i18n="about.f1d">基于 Lowenfeld 儿童绘画发展阶段论，5 个年龄段对应 5 个发展阶段，教学目标与儿童认知发展完全匹配，不超前、不滞后。</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon material-icons-outlined">school</span>
+                        <h4 data-i18n="about.f2t">理论驱动，不是经验教学</h4>
+                        <p data-i18n="about.f2d">每节课融合 DBAE 四维度（创作·美学·艺术史·批评），不是简单的"跟着画"，而是系统化的艺术素养培养。</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon material-icons-outlined">trending_up</span>
+                        <h4 data-i18n="about.f3t">3 年螺旋递进</h4>
+                        <p data-i18n="about.f3d">每个年龄段设计 3 年课程，知识与技能螺旋上升。第一年打基础，第二年拓视野，第三年建风格——学完即可无缝衔接下一阶段。</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon material-icons-outlined">visibility</span>
+                        <h4 data-i18n="about.f4t">思维可见，成长可测</h4>
+                        <p data-i18n="about.f4d">引入哈佛 Project Zero 思维例程，通过 See-Think-Wonder 等工具让思考过程可见，家长和老师都能清晰看到孩子的进步。</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon material-icons-outlined">extension</span>
+                        <h4 data-i18n="about.f5t">跨学科 STEAM 整合</h4>
+                        <p data-i18n="about.f5d">艺术不是孤立的学科。课程融合科学、数学、工程与技术，如"用几何画建筑""用色彩理解光学"，培养跨领域创造力。</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon material-icons-outlined">inventory_2</span>
+                        <h4 data-i18n="about.f6t">开箱即用，标准化交付</h4>
+                        <p data-i18n="about.f6d">780 节课全部配备详细教案（PPT 大纲），教学目标、活动流程、理论笔记一应俱全。新老师也能快速上手，保证教学质量。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 五大理论详解 -->
+            <div class="about-section reveal">
+                <h3 class="about-section-title">
+                    <span class="material-icons-outlined">auto_stories</span>
+                    <span data-i18n="about.theoryTitle">五大教育理论支撑</span>
+                </h3>
+                <p class="about-section-desc" data-i18n="about.theoryDesc">每一节课的设计都不是凭感觉，而是有据可依。以下五大理论贯穿整个课程体系：</p>
+
+                <div class="about-theories">
+                    <div class="about-theory-card" style="--theory-color: #F0B8D6">
+                        <div class="theory-card-header">
+                            <span class="theory-number">01</span>
+                            <h3 data-i18n="about.t1t">Lowenfeld 儿童绘画发展阶段论</h3>
+                        </div>
+                        <p data-i18n="about.t1d">Viktor Lowenfeld 研究发现，儿童绘画能力随认知发展呈现清晰的阶段性特征。我们据此将课程分为 5 个年龄段——涂鸦期（4-6）、图式期（7-9）、写实萌芽期（10-12）、拟写实期（13-15）、决定期（16-18），确保教学内容与孩子的发展水平精准匹配。</p>
+                        <div class="theory-ages" data-i18n-html="about.t1ages">
+                            <span>4-6 涂鸦期</span>
+                            <span>7-9 图式期</span>
+                            <span>10-12 写实萌芽</span>
+                            <span>13-15 拟写实期</span>
+                            <span>16-18 决定期</span>
+                        </div>
+                    </div>
+
+                    <div class="about-theory-card" style="--theory-color: #C3D63B">
+                        <div class="theory-card-header">
+                            <span class="theory-number">02</span>
+                            <h3 data-i18n="about.t2t">DBAE 学科式艺术教育</h3>
+                        </div>
+                        <p data-i18n-html="about.t2d">Getty 教育研究所提出的 Discipline-Based Art Education 框架，主张艺术教育应包含四个维度：<strong>创作实践</strong>（动手做）、<strong>美学感知</strong>（感受美）、<strong>艺术史</strong>（了解背景）、<strong>艺术批评</strong>（学会评价）。我们的每节课都覆盖这四个维度，而不是单纯地"画一幅画"。</p>
+                    </div>
+
+                    <div class="about-theory-card" style="--theory-color: #7DD3BF">
+                        <div class="theory-card-header">
+                            <span class="theory-number">03</span>
+                            <h3 data-i18n="about.t3t">Reggio Emilia 瑞吉欧教育</h3>
+                        </div>
+                        <p data-i18n="about.t3d">源自意大利的世界级幼教理念，核心信念是"儿童有一百种语言"。我们在低龄段课程中大量融入瑞吉欧的理念——多感官探索、环境即老师、项目制学习，让孩子用触觉、听觉、视觉等多种方式感知艺术，而不仅仅是用眼睛看。</p>
+                    </div>
+
+                    <div class="about-theory-card" style="--theory-color: #59A5E8">
+                        <div class="theory-card-header">
+                            <span class="theory-number">04</span>
+                            <h3 data-i18n="about.t4t">STEAM 跨学科整合</h3>
+                        </div>
+                        <p data-i18n="about.t4d">在 STEM（科学·技术·工程·数学）中加入 Art，形成 STEAM 教育框架。我们的课程不把艺术当作独立学科，而是与科学实验、数学几何、建筑工程等自然融合——比如用黄金比例画人体、用光学原理理解印象派、用编程创作数字艺术。</p>
+                    </div>
+
+                    <div class="about-theory-card" style="--theory-color: #E860A8">
+                        <div class="theory-card-header">
+                            <span class="theory-number">05</span>
+                            <h3 data-i18n="about.t5t">Harvard Project Zero · Artful Thinking</h3>
+                        </div>
+                        <p data-i18n-html="about.t5d">哈佛大学教育研究院的零点计划（Project Zero）开发了一套"思维例程"工具，其中最经典的是 <strong>See-Think-Wonder</strong>（看到什么→想到什么→好奇什么）。我们在每节课中嵌入思维例程，训练孩子深度观察、独立思考、提出问题的能力——这些能力远超艺术课堂本身。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 课程架构 -->
+            <div class="about-section reveal">
+                <h3 class="about-section-title">
+                    <span class="material-icons-outlined">account_tree</span>
+                    <span data-i18n="about.structTitle">课程架构</span>
+                </h3>
+                <div class="curriculum-structure">
+                    <div class="structure-card" style="--sc: #F0B8D6">
+                        <div class="sc-header">
+                            <span class="sc-age" data-i18n="about.sc1age">4-6岁</span>
+                            <span class="sc-name" data-i18n="about.sc1name">小小涂鸦班</span>
+                        </div>
+                        <span class="sc-stage" data-i18n="about.sc1stage">Lowenfeld 涂鸦期 → 前图式期</span>
+                        <p data-i18n="about.sc1desc">多感官色彩探索、基础形状认知、Reggio 项目制启蒙。156节课带孩子从自由涂鸦走向有意识的表达。</p>
+                        <div class="sc-tags" data-i18n-html="about.sc1tags">
+                            <span>色彩感知</span><span>形状语言</span><span>多感官</span><span>自由表达</span>
+                        </div>
+                    </div>
+                    <div class="structure-card" style="--sc: #C3D63B">
+                        <div class="sc-header">
+                            <span class="sc-age" data-i18n="about.sc2age">7-9岁</span>
+                            <span class="sc-name" data-i18n="about.sc2name">创意探索班</span>
+                        </div>
+                        <span class="sc-stage" data-i18n="about.sc2stage">Lowenfeld 图式期</span>
+                        <p data-i18n="about.sc2desc">DBAE 四维度全面展开，Artful Thinking 思维例程深度应用。156节课建立系统的观察力与基础技法。</p>
+                        <div class="sc-tags" data-i18n-html="about.sc2tags">
+                            <span>观察力</span><span>基础技法</span><span>艺术史启蒙</span><span>批判思维</span>
+                        </div>
+                    </div>
+                    <div class="structure-card" style="--sc: #7DD3BF">
+                        <div class="sc-header">
+                            <span class="sc-age" data-i18n="about.sc3age">10-12岁</span>
+                            <span class="sc-name" data-i18n="about.sc3name">技法进阶班</span>
+                        </div>
+                        <span class="sc-stage" data-i18n="about.sc3stage">Lowenfeld 写实萌芽期</span>
+                        <p data-i18n="about.sc3desc">透视、光影、人体比例等专业技法系统学习，STEAM 跨学科项目增多。156节课实现从"感觉画"到"理性画"的飞跃。</p>
+                        <div class="sc-tags" data-i18n-html="about.sc3tags">
+                            <span>透视法</span><span>光影素描</span><span>STEAM项目</span><span>写实基础</span>
+                        </div>
+                    </div>
+                    <div class="structure-card" style="--sc: #59A5E8">
+                        <div class="sc-header">
+                            <span class="sc-age" data-i18n="about.sc4age">13-15岁</span>
+                            <span class="sc-name" data-i18n="about.sc4name">风格养成班</span>
+                        </div>
+                        <span class="sc-stage" data-i18n="about.sc4stage">Lowenfeld 拟写实期</span>
+                        <p data-i18n="about.sc4desc">个人风格探索、独立项目创作、深度艺术批评。156节课帮助青少年找到自己的艺术语言与创作方向。</p>
+                        <div class="sc-tags" data-i18n-html="about.sc4tags">
+                            <span>风格探索</span><span>独立创作</span><span>艺术批评</span><span>项目制</span>
+                        </div>
+                    </div>
+                    <div class="structure-card" style="--sc: #E860A8">
+                        <div class="sc-header">
+                            <span class="sc-age" data-i18n="about.sc5age">16-18岁</span>
+                            <span class="sc-name" data-i18n="about.sc5name">大师预备班</span>
+                        </div>
+                        <span class="sc-stage" data-i18n="about.sc5stage">Lowenfeld 决定期</span>
+                        <p data-i18n="about.sc5desc">作品集制作、策展实践、艺术哲学深度研讨。156节课为艺术院校申请或职业方向做好全面准备。</p>
+                        <div class="sc-tags" data-i18n-html="about.sc5tags">
+                            <span>作品集</span><span>策展实践</span><span>艺术哲学</span><span>升学准备</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 每节课的结构 -->
+            <div class="about-section reveal">
+                <h3 class="about-section-title">
+                    <span class="material-icons-outlined">view_carousel</span>
+                    <span data-i18n="about.flowTitle">每节课的标准结构</span>
+                </h3>
+                <p class="about-section-desc" data-i18n="about.flowDesc">每节课都按照统一的 6 页 PPT 大纲设计，确保教学流程标准化、可复制：</p>
+                <div class="lesson-flow">
+                    <div class="flow-step">
+                        <span class="flow-emoji">🎯</span>
+                        <span class="flow-label" data-i18n="about.flow1">教学目标</span>
+                        <span class="flow-desc" data-i18n="about.flow1d">本节课的核心学习目标</span>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <span class="flow-emoji">📖</span>
+                        <span class="flow-label" data-i18n="about.flow2">知识导入</span>
+                        <span class="flow-desc" data-i18n="about.flow2d">艺术史/艺术家/理论知识</span>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <span class="flow-emoji">🎨</span>
+                        <span class="flow-label" data-i18n="about.flow3">作品赏析</span>
+                        <span class="flow-desc" data-i18n="about.flow3d">经典作品欣赏与分析</span>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <span class="flow-emoji">✏️</span>
+                        <span class="flow-label" data-i18n="about.flow4">动手创作</span>
+                        <span class="flow-desc" data-i18n="about.flow4d">学生实践环节</span>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <span class="flow-emoji">💬</span>
+                        <span class="flow-label" data-i18n="about.flow5">讨论分享</span>
+                        <span class="flow-desc" data-i18n="about.flow5d">思维例程与批评练习</span>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-step">
+                        <span class="flow-emoji">📌</span>
+                        <span class="flow-label" data-i18n="about.flow6">理论笔记</span>
+                        <span class="flow-desc" data-i18n="about.flow6d">核心知识点总结</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 合作机构 CTA -->
+            <div class="about-cta reveal">
+                <div class="cta-card">
+                    <span class="material-icons-outlined cta-icon">family_restroom</span>
+                    <h3 data-i18n="about.cta1t">家长：给孩子最好的艺术启蒙</h3>
+                    <p data-i18n="about.cta1d">780节课覆盖4-18岁全年龄段，无论孩子现在几岁，都能找到最适合的起点。不是随便画画的兴趣班——是看得见成长的系统课程。</p>
+                </div>
+                <div class="cta-card">
+                    <span class="material-icons-outlined cta-icon">handshake</span>
+                    <h3 data-i18n="about.cta2t">机构：一套即插即用的课程体系</h3>
+                    <p data-i18n="about.cta2d">完整的教研成果输出，780节标准化教案，5大理论背书，3年螺旋课程架构。无需从零开发——引入 artx 课程体系，即刻提升教学品质与品牌竞争力。</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- 课程大纲页 -->
+    <main id="view-curriculum" class="view">
+        <section class="container">
+            <h2 class="headline-medium section-title">
+                <span class="material-icons-outlined">menu_book</span>
+                <span data-i18n="curriculum.title">课程大纲</span>
+            </h2>
+            <div class="chip-group">
+                <button class="md-chip active" data-age="4-6" data-i18n="chip.4-6">4-6岁</button>
+                <button class="md-chip" data-age="7-9" data-i18n="chip.7-9">7-9岁</button>
+                <button class="md-chip" data-age="10-12" data-i18n="chip.10-12">10-12岁</button>
+                <button class="md-chip" data-age="13-15" data-i18n="chip.13-15">13-15岁</button>
+                <button class="md-chip" data-age="16-18" data-i18n="chip.16-18">16-18岁</button>
+            </div>
+            <div id="curriculum-detail" class="curriculum-detail"></div>
+        </section>
+    </main>
+
+    <!-- 课程日历页 -->
+    <main id="view-calendar" class="view">
+        <section class="container">
+            <h2 class="headline-medium section-title">
+                <span class="material-icons-outlined">calendar_month</span>
+                <span data-i18n="calendar.title">课程表</span>
+            </h2>
+            <div class="filter-bar">
+                <div class="md-select-wrap">
+                    <span class="material-icons-outlined select-icon">group</span>
+                    <select id="cal-age-filter" class="md-select" data-i18n-options="cal.age">
+                        <option value="all">全部年龄段</option>
+                        <option value="4-6">4-6岁 · 小小涂鸦班</option>
+                        <option value="7-9">7-9岁 · 创意探索班</option>
+                        <option value="10-12">10-12岁 · 技法进阶班</option>
+                        <option value="13-15">13-15岁 · 风格养成班</option>
+                        <option value="16-18">16-18岁 · 大师预备班</option>
+                    </select>
+                </div>
+                <div class="md-select-wrap">
+                    <span class="material-icons-outlined select-icon">school</span>
+                    <select id="cal-year-filter" class="md-select" data-i18n-options="cal.year">
+                        <option value="y1">第一年</option>
+                        <option value="y2">第二年</option>
+                        <option value="y3">第三年</option>
+                    </select>
+                </div>
+                <div class="md-select-wrap">
+                    <span class="material-icons-outlined select-icon">date_range</span>
+                    <select id="cal-term-filter" class="md-select" data-i18n-options="cal.term">
+                        <option value="fall">秋季</option>
+                        <option value="winter">冬季</option>
+                        <option value="spring">春季</option>
+                        <option value="summer">暑期</option>
+                    </select>
+                </div>
+            </div>
+            <div id="calendar-grid" class="calendar-grid"></div>
+        </section>
+    </main>
+
+    <!-- PPT课件弹窗 -->
+    <div id="lesson-modal" class="md-dialog-scrim hidden">
+        <div class="md-dialog-surface">
+            <div class="dialog-top-bar">
+                <div class="dialog-title-area">
+                    <span class="dialog-badge" id="ppt-badge"></span>
+                    <span class="title-medium" id="ppt-week"></span>
+                </div>
+                <button class="md-icon-btn" id="modal-close">
+                    <span class="material-icons-outlined">close</span>
+                </button>
+            </div>
+            <div class="ppt-viewport" id="ppt-slides"></div>
+            <div class="ppt-controls">
+                <button class="md-btn md-btn-tonal" id="ppt-prev">
+                    <span class="material-icons-outlined">chevron_left</span>
+                    <span data-i18n="ppt.prev">上一页</span>
+                </button>
+                <span class="ppt-indicator" id="ppt-page">1 / 1</span>
+                <button class="md-btn md-btn-tonal" id="ppt-next">
+                    <span data-i18n="ppt.next">下一页</span>
+                    <span class="material-icons-outlined">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <img src="assets/logo.png" alt="artx" class="footer-logo">
+        <p class="body-small" data-i18n="footer.text">© 2026 artx · 让每个孩子都能发现美、创造美</p>
+    </footer>
+
+    <script src="curriculum-data.js"></script>
+    <script src="data-4-6.js"></script>
+    <script src="data-7-9.js"></script>
+    <script src="data-10-12.js"></script>
+    <script src="data-13-15.js"></script>
+    <script src="data-16-18.js"></script>
+    <script src="data-4-6-en.js"></script>
+    <script src="data-7-9-en.js"></script>
+    <script src="data-10-12-en.js"></script>
+    <script src="data-13-15-en.js"></script>
+    <script src="data-16-18-en.js"></script>
+    <script>
+      // 中文数据
+      const CURRICULUM_ZH = {
+        "4-6": DATA_4_6, "7-9": DATA_7_9, "10-12": DATA_10_12,
+        "13-15": DATA_13_15, "16-18": DATA_16_18
+      };
+      // 英文数据
+      const CURRICULUM_EN = {
+        "4-6": typeof DATA_4_6_EN !== 'undefined' ? DATA_4_6_EN : DATA_4_6,
+        "7-9": typeof DATA_7_9_EN !== 'undefined' ? DATA_7_9_EN : DATA_7_9,
+        "10-12": typeof DATA_10_12_EN !== 'undefined' ? DATA_10_12_EN : DATA_10_12,
+        "13-15": typeof DATA_13_15_EN !== 'undefined' ? DATA_13_15_EN : DATA_13_15,
+        "16-18": typeof DATA_16_18_EN !== 'undefined' ? DATA_16_18_EN : DATA_16_18
+      };
+      // 默认加载中文
+      Object.assign(CURRICULUM, CURRICULUM_ZH);
+    </script>
+    <script src="app.js"></script>
+    <script>
+      // Scroll reveal
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
