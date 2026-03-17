@@ -292,7 +292,7 @@ body {
 
 .hero-sub {
   opacity: 0.7;
-  max-width: 600px;
+  max-width: 740px;
   font-size: 18px;
   line-height: 1.9;
   font-weight: 400;
@@ -1271,6 +1271,32 @@ body {
   }
   .home-contact-title { font-size: 28px; }
   .contact-input-row { flex-direction: column; }
+
+  /* Five Theories horizontal scroll */
+  .home-theories-section-inner {
+    padding: 40px 0 56px;
+    overflow: hidden;
+  }
+  .home-theories-section-title {
+    font-size: 28px;
+    padding: 0 24px;
+    margin-bottom: 32px;
+  }
+  .home-theories-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100vw;
+    padding: 0 24px 16px;
+    box-sizing: border-box;
+    gap: 0;
+  }
+  .home-theory-card {
+    min-width: 240px;
+    flex-shrink: 0;
+    padding: 0 24px;
+  }
 }
 
 /* ===== About Page ===== */

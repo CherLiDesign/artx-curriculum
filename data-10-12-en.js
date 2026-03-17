@@ -6,12 +6,12 @@ const DATA_10_12_EN = {
   color: "#1565C0",
   theory: "Lowenfeld Dawning Realism + STEAM + DBAE Reinforcement",
   goals: [
-    "Support the pursuit of realism while protecting creativity [Lowenfeld Dawning Realism]",
-    "Systematic drawing fundamentals: perspective, proportion, light and shadow [DBAE Technical Training]",
-    "Survey of art history from the Renaissance to the modern era [DBAE Aesthetics + Art History]",
-    "STEAM cross-disciplinary connections: mathematics in perspective, physics in light and shadow [STEAM Deep Integration]",
-    "Apply Artful Thinking routines to deepen discussion and reflection [DBAE Criticism]",
-    "Independently complete comprehensive creative projects to cultivate artistic autonomy [Lowenfeld Self-Expression]"
+    "【Realism & Creativity】Support the pursuit of realism while protecting creativity",
+    "【Drawing Fundamentals】Systematic training in perspective, proportion, and light and shadow",
+    "【Art History】Survey of art history from the Renaissance to the modern era",
+    "【Cross-Disciplinary】STEAM connections: mathematics in perspective, physics in light and shadow",
+    "【Art Criticism】Apply Artful Thinking to deepen discussion and reflection",
+    "【Self-Expression】Independently complete comprehensive creative projects to cultivate artistic autonomy"
   ],
   terms: {
     "y1-fall": {

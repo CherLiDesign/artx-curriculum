@@ -10,12 +10,12 @@ const DATA_13_15_EN = {
   color: "#6A1B9A",
   theory: "Lowenfeld Pseudo-Naturalistic Stage + Project Zero + DBAE Specialization",
   goals: [
-    "Master professional drawing techniques and creative processes [DBAE Specialization]",
-    "Develop deep thinking and critical art appreciation skills [Project Zero Deep Thinking]",
-    "Understand art history and contemporary art contexts [DBAE Specialization]",
-    "Develop a personal artistic style and creative identity [Project-Based Learning]",
-    "Build competency in curating, criticism, and art writing [Project Zero Deep Thinking]",
-    "Complete series-based artworks and build a professional portfolio [Project-Based Learning]"
+    "【Professional Techniques】Master professional drawing techniques and creative processes",
+    "【Deep Thinking】Develop critical art appreciation and analytical skills",
+    "【Art History & Theory】Understand art history and contemporary art contexts",
+    "【Style Development】Develop a personal artistic style and creative identity",
+    "【Curating & Criticism】Build competency in curating, criticism, and art writing",
+    "【Portfolio】Complete series-based artworks and build a professional portfolio"
   ],
   terms: {
     // ==================== Year 1 · Fall Term ====================

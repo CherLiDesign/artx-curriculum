@@ -6,12 +6,12 @@ const DATA_7_9_EN = {
   "color": "#00897B",
   "theory": "Lowenfeld Schematic Stage + DBAE Four Dimensions + Artful Thinking",
   "goals": [
-    "Develop comprehensive literacy in creation, aesthetics, art history, and criticism through the four DBAE dimensions",
-    "Enhance observation and critical thinking skills through Artful Thinking routines",
-    "Spark curiosity and inquiry through See-Think-Wonder",
-    "Master a variety of foundational techniques and material applications through creative practice",
-    "Build aesthetic judgment and learn to appreciate and evaluate artworks",
-    "Three years of systematic learning to prepare for the Dawning Realism stage at ages 10-12"
+    "【Comprehensive Literacy】Develop literacy in creation, aesthetics, art history, and criticism through the four DBAE dimensions",
+    "【Critical Thinking】Enhance observation and critical thinking skills through Artful Thinking routines",
+    "【Thinking Routines】Spark curiosity and inquiry through See-Think-Wonder",
+    "【Core Techniques】Master a variety of foundational techniques and material applications through creative practice",
+    "【Aesthetic Judgment】Build aesthetic judgment and learn to appreciate and evaluate artworks",
+    "【Building Toward Growth】Three years of systematic learning to prepare for the Dawning Realism stage at ages 10-12"
   ],
   "terms": {
     "y1-fall": {
