@@ -475,11 +475,8 @@ function applyLanguage() {
   document.getElementById('lang-toggle').querySelector('.lang-label').textContent = t('langBtn');
   document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
 
-  // Swap Chinese chart sections vs English chart section
+  // Show English supplementary chart only in EN mode
   const isEN = currentLang === 'en';
-  document.querySelectorAll('.home-devchart').forEach(el => {
-    el.style.display = isEN ? 'none' : '';
-  });
   const devfw = document.querySelector('.home-devfw');
   if (devfw) devfw.style.display = isEN ? '' : 'none';
 
