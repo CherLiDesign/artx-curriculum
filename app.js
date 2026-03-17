@@ -597,9 +597,9 @@ document.querySelectorAll('.nav-item').forEach(link => {
 // ===== 首页：CTA 链接跳转 =====
 document.querySelectorAll('.hero-cta, .home-feature-link').forEach(link => {
   link.addEventListener('click', e => {
-    e.preventDefault();
     const view = link.dataset.view;
-    if (!view) return;
+    if (!view) return; // let anchor href scroll naturally
+    e.preventDefault();
     document.querySelectorAll('.nav-item').forEach(l => l.classList.remove('active'));
     document.querySelector(`[data-view="${view}"]`).classList.add('active');
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
