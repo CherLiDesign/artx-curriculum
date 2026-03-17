@@ -1276,24 +1276,32 @@ body {
   .home-contact-title { font-size: 28px; }
   .contact-input-row { flex-direction: column; }
 
-  /* Five Theories — vertical stack on mobile */
+  /* Five Theories — single column on mobile */
+  .home-theories-section {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
   .home-theories-section-inner {
+    max-width: 100%;
     padding: 40px 24px 56px;
+    overflow-x: hidden;
   }
   .home-theories-section-title {
     font-size: 28px;
     margin-bottom: 32px;
   }
   .home-theories-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
   .home-theory-card {
+    width: 100%;
+    min-width: 0;
     padding: 24px 0;
     border-left: none;
     border-bottom: 1px solid var(--gray-200);
   }
-  .home-theory-card:first-child { padding-left: 0; }
   .home-theory-card:last-child { border-bottom: none; }
 }
 
