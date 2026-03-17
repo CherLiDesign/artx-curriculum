@@ -236,10 +236,10 @@ body {
 .home-programs {
   max-width: 1200px;
   margin: 0 auto;
-  border-bottom: 2px solid var(--black);
+  border-top: 2px solid var(--black);
 }
 .home-programs-inner {
-  padding: 40px 48px 96px;
+  padding: 40px 48px 48px;
 }
 .home-programs-title {
   font-size: 48px;
@@ -451,13 +451,13 @@ body {
 
 /* ===== Home Theories Section ===== */
 .home-theories-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  border-top: 2px solid var(--black);
+  background: #F8F8F6;
   border-bottom: 2px solid var(--black);
 }
 .home-theories-section-inner {
-  padding: 80px 48px 96px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 48px 96px;
 }
 .home-theories-section-title {
   font-size: 48px;
@@ -498,6 +498,247 @@ body {
   font-size: 14px;
   line-height: 1.9;
   color: var(--gray-600);
+}
+
+/* ===== Development Chart Section ===== */
+.home-devchart {
+  background: #F8F8F6;
+  border-top: 2px solid var(--black);
+}
+.home-devchart-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 48px 48px;
+}
+.home-devchart-title {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.home-devchart-sub {
+  font-size: 16px;
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+.devchart-chart-container {
+  display: flex;
+  align-items: stretch;
+}
+.devchart-labels-col {
+  width: 130px;
+  flex-shrink: 0;
+  position: relative;
+}
+.dcl-item {
+  position: absolute;
+  right: 12px;
+  text-align: right;
+  transform: translateY(-50%);
+  font-size: 13px;
+  line-height: 1.3;
+}
+.dcl-item strong {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+}
+.dcl-item span {
+  font-size: 11px;
+  color: var(--gray-600);
+}
+.dcl-artx strong {
+  font-size: 14px;
+}
+.devchart-svg-wrap {
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+}
+.devchart-svg-wrap svg {
+  min-width: 760px;
+  width: 100%;
+}
+.devchart-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 32px;
+  padding: 20px 24px;
+  border-left: 3px solid var(--black);
+  background: var(--white);
+}
+.devchart-note-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+  line-height: 1.6;
+}
+.devchart-note p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--gray-700);
+}
+
+/* ===== Developmental Framework v2 ===== */
+.home-devfw {
+  display: none; /* shown only in EN mode */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 48px 48px;
+  border-top: 1px solid var(--gray-200);
+}
+.home-devfw-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gray-500);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+.home-devfw-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.home-devfw-sub {
+  font-size: 14px;
+  color: var(--gray-600);
+  margin-bottom: 40px;
+}
+.devfw-chart-wrap {
+  overflow-x: auto;
+}
+.devfw-chart-wrap svg {
+  min-width: 900px;
+  width: 100%;
+  display: block;
+}
+.devfw-sources {
+  font-size: 11px;
+  color: var(--gray-500);
+  margin-top: 24px;
+  letter-spacing: 0.02em;
+  line-height: 1.8;
+}
+
+/* ===== Growth Pathway Section ===== */
+.home-growthmap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 48px 64px;
+  border-top: 2px solid var(--black);
+}
+.growthmap-header {
+  margin-bottom: 52px;
+}
+.growthmap-title {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+.growthmap-sub {
+  font-size: 16px;
+  color: var(--gray-600);
+  max-width: 600px;
+  line-height: 1.7;
+}
+.growthmap-track {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+}
+.growthmap-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--gray-400);
+  flex-shrink: 0;
+  width: 28px;
+}
+.growthmap-card {
+  flex: 1;
+  border-radius: 12px;
+  padding: 28px 22px 24px;
+  display: flex;
+  flex-direction: column;
+}
+.growthmap-card-age {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: rgba(0,0,0,0.55);
+  margin-bottom: 3px;
+}
+.growthmap-card-name {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.4);
+  margin-bottom: 18px;
+}
+.growthmap-card-headline {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin-bottom: 18px;
+  color: rgba(0,0,0,0.85);
+}
+.growthmap-card-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+  margin-bottom: 20px;
+}
+.growthmap-card-bullets li {
+  font-size: 13px;
+  line-height: 1.55;
+  padding-left: 14px;
+  position: relative;
+  color: rgba(0,0,0,0.72);
+}
+.growthmap-card-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: rgba(0,0,0,0.35);
+}
+.growthmap-card-evolution {
+  font-size: 12px;
+  line-height: 1.55;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  color: rgba(0,0,0,0.65);
+}
+.gce-label {
+  display: block;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.4);
+  margin-bottom: 5px;
+}
+.growthmap-statement {
+  margin-top: 52px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: var(--gray-700);
+  font-style: italic;
+  line-height: 1.6;
 }
 
 /* ===== Home CTA Section ===== */
@@ -698,7 +939,7 @@ body {
 }
 
 .home-journey-inner {
-  padding: 80px 48px 32px;
+  padding: 48px 48px 32px;
 }
 .home-journey-title {
   font-size: 48px;
@@ -739,6 +980,86 @@ body {
   line-height: 1.9;
   color: var(--gray-600);
   margin-top: 8px;
+}
+
+/* ===== Lesson Flow ===== */
+.home-lesson {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--gray-200);
+}
+.home-lesson-inner {
+  padding: 64px 48px 80px;
+}
+.home-lesson-header {
+  margin-bottom: 48px;
+}
+.home-lesson-title {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.home-lesson-sub {
+  font-size: 14px;
+  color: var(--gray-500);
+}
+.lesson-flow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+.lesson-step {
+  flex: 1;
+  padding: 0 24px 0 0;
+}
+.lesson-step-main {
+  flex: 1.3;
+}
+.lesson-step-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.lesson-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 900;
+  color: #000;
+  flex-shrink: 0;
+}
+.lesson-time {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gray-500);
+  letter-spacing: 0.02em;
+}
+.lesson-step-title {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.lesson-step-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--gray-600);
+}
+.lesson-arrow {
+  flex-shrink: 0;
+  font-size: 20px;
+  color: var(--gray-300);
+  padding: 0 4px;
+  margin-top: 4px;
+  align-self: flex-start;
+  padding-top: 4px;
 }
 
 /* ===== Gallery Image Band ===== */
@@ -1319,7 +1640,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--black);
-  min-height: 220px;
+  min-height: 340px;
 }
 
 .card-visual {
@@ -1373,7 +1694,10 @@ body {
 }
 
 .card-body {
-  padding: 16px 20px 8px;
+  padding: 16px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card-body .title-medium {
@@ -1382,10 +1706,57 @@ body {
   color: var(--black);
 }
 
-.card-desc {
-  color: rgba(0,0,0,0.5);
-  margin-top: 2px;
+.card-headline {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 6px 0 12px;
+  color: var(--black);
+}
+
+.card-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-bullets li {
   font-size: 12px;
+  line-height: 1.45;
+  color: rgba(0,0,0,0.72);
+  padding-left: 14px;
+  position: relative;
+}
+
+.card-bullets li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.card-evolution {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  font-size: 11px;
+  line-height: 1.5;
+  color: rgba(0,0,0,0.6);
+}
+
+.ce-label {
+  display: block;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+  margin-bottom: 3px;
 }
 
 .card-action {

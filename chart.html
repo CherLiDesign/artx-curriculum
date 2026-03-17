@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>artx 课程科学依据图</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600;700;900&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #fff;
+      font-family: 'Inter', 'Noto Sans SC', sans-serif;
+      padding: 64px 48px 80px;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 1300px; margin: 0 auto; }
+    .header { margin-bottom: 48px; }
+    .header h1 {
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+    .header p { font-size: 15px; color: #888; }
+    svg { width: 100%; height: auto; overflow: visible; }
+    .source {
+      margin-top: 32px;
+      font-size: 11px;
+      color: #BBBBBB;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <h1>科学依据 × artx 课程</h1>
+    <p>儿童发展各维度与 artx 课程阶段划分的对照——每个分班节点，都有发展科学支撑</p>
+  </div>
+
+  <svg viewBox="0 0 1280 430" xmlns="http://www.w3.org/2000/svg"
+       style="font-family:'Inter','Noto Sans SC',sans-serif;">
+
+    <!--
+      ageToX(a) = 178 + (a-4)*72
+      4→178  7→394  10→610  12→754  13→826  14→898  15→970  16→1042  17→1114  18→1186  end→1258
+      Band width (3 years) = 216px
+    -->
+
+    <!-- ─────────────────────────────────────── -->
+    <!-- VERTICAL GRID LINES at band boundaries -->
+    <!-- ─────────────────────────────────────── -->
+    <line x1="178" y1="28" x2="178" y2="342" stroke="#EEEEEE" stroke-width="1"/>
+    <line x1="394" y1="28" x2="394" y2="342" stroke="#DDDDDD" stroke-width="1" stroke-dasharray="4 3"/>
+    <line x1="610" y1="28" x2="610" y2="342" stroke="#DDDDDD" stroke-width="1" stroke-dasharray="4 3"/>
+    <line x1="826" y1="28" x2="826" y2="342" stroke="#DDDDDD" stroke-width="1" stroke-dasharray="4 3"/>
+    <line x1="1042" y1="28" x2="1042" y2="342" stroke="#DDDDDD" stroke-width="1" stroke-dasharray="4 3"/>
+    <line x1="1258" y1="28" x2="1258" y2="342" stroke="#EEEEEE" stroke-width="1"/>
+
+    <!-- ─────────────────────────────────────── -->
+    <!-- AGE SCALE                              -->
+    <!-- ─────────────────────────────────────── -->
+    <text x="178" y="20" text-anchor="middle" font-size="11" fill="#BBBBBB">4岁</text>
+    <text x="394" y="20" text-anchor="middle" font-size="11" fill="#BBBBBB">7岁</text>
+    <text x="610" y="20" text-anchor="middle" font-size="11" fill="#BBBBBB">10岁</text>
+    <text x="826" y="20" text-anchor="middle" font-size="11" fill="#BBBBBB">13岁</text>
+    <text x="1042" y="20" text-anchor="middle" font-size="11" fill="#BBBBBB">16岁</text>
+    <text x="1258" y="20" text-anchor="middle" font-size="11" fill="#BBBBBB">18岁</text>
+
+    <!-- ─────────────────────────────────────── -->
+    <!-- TRACK 1: PIAGET  y=30–68              -->
+    <!-- ─────────────────────────────────────── -->
+    <text x="170" y="47" text-anchor="end" font-size="11" font-weight="700" fill="#333">认知阶段</text>
+    <text x="170" y="62" text-anchor="end" font-size="9" fill="#AAAAAA">Piaget</text>
+
+    <!-- 前运算期 4-7 -->
+    <rect x="179" y="30" width="213" height="36" rx="3" fill="#E6E6E6"/>
+    <text x="286" y="51" text-anchor="middle" font-size="11" font-weight="600" fill="#555">前运算期</text>
+
+    <!-- 具体运算期 7-12 (x=394, w=360) -->
+    <rect x="395" y="30" width="357" height="36" rx="3" fill="#D2D2D2"/>
+    <text x="574" y="51" text-anchor="middle" font-size="11" font-weight="600" fill="#555">具体运算期</text>
+
+    <!-- 形式运算期 12-18+ (x=754, w=503) -->
+    <rect x="755" y="30" width="502" height="36" rx="3" fill="#BEBEBE"/>
+    <text x="1006" y="51" text-anchor="middle" font-size="11" font-weight="600" fill="#555">形式运算期</text>
+
+    <!-- ─────────────────────────────────────── -->
+    <!-- TRACK 2: ERIKSON  y=76–114            -->
+    <!-- ─────────────────────────────────────── -->
+    <text x="170" y="93" text-anchor="end" font-size="11" font-weight="700" fill="#333">人格发展</text>
+    <text x="170" y="108" text-anchor="end" font-size="9" fill="#AAAAAA">Erikson</text>
+
+    <!-- 主动 vs 内疚 4-7 -->
+    <rect x="179" y="76" width="213" height="36" rx="3" fill="#F0B8D6" fill-opacity="0.6"/>
+    <text x="286" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="#555">主动</text>
+    <text x="286" y="106" text-anchor="middle" font-size="9" fill="#777">vs 内疚</text>
+
+    <!-- 勤奋 vs 自卑 7-12 -->
+    <rect x="395" y="76" width="357" height="36" rx="3" fill="#C3D63B" fill-opacity="0.45"/>
+    <text x="574" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="#555">勤奋</text>
+    <text x="574" y="106" text-anchor="middle" font-size="9" fill="#666">vs 自卑</text>
+
+    <!-- 同一性 12-18+ -->
+    <rect x="755" y="76" width="502" height="36" rx="3" fill="#59A5E8" fill-opacity="0.3"/>
+    <text x="1006" y="92" text-anchor="middle" font-size="10" font-weight="700" fill="#555">同一性建立</text>
+    <text x="1006" y="106" text-anchor="middle" font-size="9" fill="#666">vs 角色混乱</text>
+
+    <!-- ─────────────────────────────────────── -->
+    <!-- TRACK 3: BRAIN  y=122–160             -->
+    <!-- ─────────────────────────────────────── -->
+    <text x="170" y="137" text-anchor="end" font-size="11" font-weight="700" fill="#333">大脑可塑性</text>
+    <text x="170" y="152" text-anchor="end" font-size="9" fill="#AAAAAA">Brain</text>
+
+    <!-- PFC 持续发育线 (dashed, full width) -->
+    <line x1="178" y1="157" x2="1258" y2="157" stroke="#CCCCCC" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="1268" y="161" font-size="8" fill="#BBBBBB">→ PFC 25岁</text>
+
+    <!-- 第一可塑窗口 4-10 (x=178, w=432) -->
+    <rect x="179" y="124" width="429" height="28" rx="3" fill="#7DD3BF" fill-opacity="0.35"/>
+    <text x="394" y="141" text-anchor="middle" font-size="10" font-weight="600" fill="#1A6B5A">突触修剪 I · 视觉艺术敏感窗口 (4–10岁)</text>
+
+    <!-- 第二可塑窗口 12-17 (x=754, w=360) -->
+    <rect x="755" y="124" width="359" height="28" rx="3" fill="#7DD3BF" fill-opacity="0.35"/>
+    <text x="934" y="141" text-anchor="middle" font-size="10" font-weight="600" fill="#1A6B5A">突触修剪 II · 第二可塑窗口 (12–17岁)</text>
+
+    <!-- ─────────────────────────────────────── -->
+    <!-- TRACK 4: LOWENFELD  y=168–206         -->
+    <!-- ─────────────────────────────────────── -->
+    <text x="170" y="183" text-anchor="end" font-size="11" font-weight="700" fill="#333">绘画发展</text>
+    <text x="170" y="198" text-anchor="end" font-size="9" fill="#AAAAAA">Lowenfeld</text>
+
+    <!-- 前图式期 4-7 (x=178, w=216) -->
+    <rect x="179" y="168" width="213" height="36" rx="3" fill="#F2F2F2" stroke="#DDDDDD" stroke-width="1"/>
+    <text x="286" y="189" text-anchor="middle" font-size="10" font-weight="600" fill="#555">前图式期</text>
+
+    <!-- 图式期 7-9 (x=394, w=144) -->
+    <rect x="395" y="168" width="143" height="36" rx="3" fill="#EBEBEB" stroke="#DDDDDD" stroke-width="1"/>
+    <text x="467" y="189" text-anchor="middle" font-size="10" font-weight="600" fill="#555">图式期</text>
+
+    <!-- 写实萌芽 9-12 (9: 178+5*72=538, w=216) -->
+    <rect x="539" y="168" width="213" height="36" rx="3" fill="#E3E3E3" stroke="#DDDDDD" stroke-width="1"/>
+    <text x="646" y="189" text-anchor="middle" font-size="10" font-weight="600" fill="#555">写实萌芽</text>
+
+    <!-- 拟写实期 12-14 (x=754, w=144) -->
+    <rect x="755" y="168" width="141" height="36" rx="3" fill="#DADADA" stroke="#CCCCCC" stroke-width="1"/>
+    <text x="826" y="189" text-anchor="middle" font-size="10" font-weight="600" fill="#555">拟写实期</text>
+
+    <!-- 决定期 14-18+ (14: 178+10*72=898, w=360) -->
+    <rect x="899" y="168" width="358" height="36" rx="3" fill="#D0D0D0" stroke="#C4C4C4" stroke-width="1"/>
+    <text x="1078" y="189" text-anchor="middle" font-size="10" font-weight="600" fill="#555">决定期</text>
+
+    <!-- ─────────────────────────────────────── -->
+    <!-- SEPARATOR                              -->
+    <!-- ─────────────────────────────────────── -->
+    <line x1="0" y1="216" x2="1280" y2="216" stroke="#111111" stroke-width="2"/>
+
+    <!-- ─────────────────────────────────────── -->
+    <!-- TRACK 5: ARTX  y=224–306              -->
+    <!-- ─────────────────────────────────────── -->
+    <text x="170" y="255" text-anchor="end" font-size="13" font-weight="900" fill="#000">artx</text>
+    <text x="170" y="271" text-anchor="end" font-size="11" font-weight="700" fill="#000">课程</text>
+
+    <!-- 小小涂鸦班 4-6 -->
+    <rect x="180" y="224" width="212" height="80" rx="5" fill="#F0B8D6"/>
+    <text x="286" y="251" text-anchor="middle" font-size="10" fill="#000" opacity="0.6">4 – 6 岁</text>
+    <text x="286" y="270" text-anchor="middle" font-size="14" font-weight="900" fill="#000">小小涂鸦班</text>
+    <text x="286" y="291" text-anchor="middle" font-size="9" fill="#555">Reggio · Lowenfeld</text>
+
+    <!-- 创意探索班 7-9 -->
+    <rect x="396" y="224" width="212" height="80" rx="5" fill="#C3D63B"/>
+    <text x="502" y="251" text-anchor="middle" font-size="10" fill="#000" opacity="0.6">7 – 9 岁</text>
+    <text x="502" y="270" text-anchor="middle" font-size="14" font-weight="900" fill="#000">创意探索班</text>
+    <text x="502" y="291" text-anchor="middle" font-size="9" fill="#555">Project Zero</text>
+
+    <!-- 技法进阶班 10-12 -->
+    <rect x="612" y="224" width="212" height="80" rx="5" fill="#7DD3BF"/>
+    <text x="718" y="251" text-anchor="middle" font-size="10" fill="#000" opacity="0.6">10 – 12 岁</text>
+    <text x="718" y="270" text-anchor="middle" font-size="14" font-weight="900" fill="#000">技法进阶班</text>
+    <text x="718" y="291" text-anchor="middle" font-size="9" fill="#555">DBAE</text>
+
+    <!-- 风格养成班 13-15 -->
+    <rect x="828" y="224" width="212" height="80" rx="5" fill="#59A5E8"/>
+    <text x="934" y="251" text-anchor="middle" font-size="10" fill="#000" opacity="0.6">13 – 15 岁</text>
+    <text x="934" y="270" text-anchor="middle" font-size="14" font-weight="900" fill="#000">风格养成班</text>
+    <text x="934" y="291" text-anchor="middle" font-size="9" fill="#555">STEAM · DBAE</text>
+
+    <!-- 大师预备班 16-18 -->
+    <rect x="1044" y="224" width="212" height="80" rx="5" fill="#E860A8"/>
+    <text x="1150" y="251" text-anchor="middle" font-size="10" fill="#fff" opacity="0.8">16 – 18 岁</text>
+    <text x="1150" y="270" text-anchor="middle" font-size="14" font-weight="900" fill="#fff">大师预备班</text>
+    <text x="1150" y="291" text-anchor="middle" font-size="9" fill="#ffe0f4">All Theories</text>
+
+    <!-- ─────────────────────────────────────── -->
+    <!-- TRANSITION ANNOTATIONS               -->
+    <!-- ─────────────────────────────────────── -->
+
+    <!-- @ age 7 (x=394) -->
+    <line x1="394" y1="306" x2="394" y2="320" stroke="#555" stroke-width="1.5"/>
+    <polygon points="394,326 390,318 398,318" fill="#555"/>
+    <text x="394" y="343" text-anchor="middle" font-size="9" font-weight="700" fill="#333">认知进具体运算</text>
+    <text x="394" y="356" text-anchor="middle" font-size="9" fill="#888">精细运动快速成熟</text>
+    <text x="394" y="369" text-anchor="middle" font-size="9" fill="#888">开始系统观察训练</text>
+
+    <!-- @ age 10 (x=610) -->
+    <line x1="610" y1="306" x2="610" y2="320" stroke="#555" stroke-width="1.5"/>
+    <polygon points="610,326 606,318 614,318" fill="#555"/>
+    <text x="610" y="343" text-anchor="middle" font-size="9" font-weight="700" fill="#333">敏感期高峰结束</text>
+    <text x="610" y="356" text-anchor="middle" font-size="9" fill="#888">手眼协调接近成人</text>
+    <text x="610" y="369" text-anchor="middle" font-size="9" fill="#888">进入技法学习黄金期</text>
+
+    <!-- @ age 13 (x=826) -->
+    <line x1="826" y1="306" x2="826" y2="320" stroke="#555" stroke-width="1.5"/>
+    <polygon points="826,326 822,318 830,318" fill="#555"/>
+    <text x="826" y="343" text-anchor="middle" font-size="9" font-weight="700" fill="#333">第二可塑窗口开启</text>
+    <text x="826" y="356" text-anchor="middle" font-size="9" fill="#888">同一性建立期</text>
+    <text x="826" y="369" text-anchor="middle" font-size="9" fill="#888">风格与自我探索</text>
+
+    <!-- @ age 16 (x=1042) -->
+    <line x1="1042" y1="306" x2="1042" y2="320" stroke="#555" stroke-width="1.5"/>
+    <polygon points="1042,326 1038,318 1046,318" fill="#555"/>
+    <text x="1042" y="343" text-anchor="middle" font-size="9" font-weight="700" fill="#333">决定期全面开始</text>
+    <text x="1042" y="356" text-anchor="middle" font-size="9" fill="#888">形式运算完全成熟</text>
+    <text x="1042" y="369" text-anchor="middle" font-size="9" fill="#888">专业路径确立</text>
+
+  </svg>
+
+  <p class="source">
+    理论来源：Piaget (1952) 认知发展阶段论 · Erikson (1950) 心理社会发展理论 · Lowenfeld (1947) 儿童绘画发展阶段 · National Scientific Council on the Developing Child (2007) 神经可塑性研究<br>
+    artx 课程阶段设计参考以上发展理论，结合真实教学实践调整。
+  </p>
+
+</div>
+</body>
+</html>

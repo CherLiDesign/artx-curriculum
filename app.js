@@ -12,7 +12,10 @@ const I18N = {
     "hero.subtitle": "让艺术成为孩子的第二语言",
     "hero.desc": "artx 是一套为艺术机构打造的专业少儿课程体系，覆盖4-18岁全年龄段，融合五大国际教育理论。我们以「展览式教学」为核心，孩子们的作品走进 Palace of Fine Arts 等真实展厅，在创作、布展、与观众互动的过程中螺旋成长。每学期都看得见进步，从涂鸦到独立创作，一步步蜕变。",
     "hero.theories": '<span class="theory-tag">Lowenfeld 发展阶段论</span><span class="theory-tag">DBAE 学科式艺术教育</span><span class="theory-tag">Reggio Emilia 瑞吉欧</span><span class="theory-tag">STEAM 跨学科整合</span><span class="theory-tag">Project Zero 思维例程</span>',
-    "home.selectClass": "探索课程",
+    "home.selectClass": "artx 成长路径",
+    "home.devchartTitle": "读懂每个年龄的孩子",
+    "home.devchartSub": "artx 的每个分班节点，都对应儿童认知、人格、大脑与绘画发展的自然转变",
+    "home.devchartNote": "以上为科学参考区间，不是硬性规定。每个孩子的发展节奏各有不同——artx 老师会在充分了解每位孩子的兴趣、性格和当前状态后，灵活调整课程内容与深度，不超前，不滞后。",
     "home.theoriesTitle": "五大教育理论支撑每一节课",
     "home.theory1t": "Lowenfeld 发展阶段论",
     "home.theory1d": "基于儿童认知发展规律，5个年龄段精准匹配5个绘画发展阶段，不超前、不滞后。",
@@ -181,7 +184,10 @@ const I18N = {
     "hero.subtitle": "Let Art Become Your Child's Second Language",
     "hero.desc": "artx is a professional children's art curriculum designed for art institutions, covering ages 4-18, grounded in five international educational theories. With Exhibition-Based Teaching at its core, students' artwork is showcased in real venues like the Palace of Fine Arts. Through creating, curating, and engaging with real audiences, children grow with every semester — from first doodles to independent creation.",
     "hero.theories": '<span class="theory-tag">Lowenfeld Developmental Stages</span><span class="theory-tag">DBAE Art Education</span><span class="theory-tag">Reggio Emilia</span><span class="theory-tag">STEAM Integration</span><span class="theory-tag">Project Zero Thinking Routines</span>',
-    "home.selectClass": "Explore Programs",
+    "home.selectClass": "artx Growth Path",
+    "home.devchartTitle": "Understanding Every Age",
+    "home.devchartSub": "Every artx class grouping aligns with natural transitions in cognitive, emotional, brain, and artistic development",
+    "home.devchartNote": "These are scientific reference ranges, not rigid rules. Every child develops at their own pace — artx teachers take time to understand each child's interests, personality, and current stage, then adapt the curriculum accordingly.",
     "home.theoriesTitle": "Five Educational Theories Behind Every Lesson",
     "home.theory1t": "Lowenfeld Developmental Stages",
     "home.theory1d": "Matched to children's cognitive development — 5 age groups aligned with 5 artistic stages. Never too advanced, never too simple.",
@@ -390,6 +396,14 @@ function applyLanguage() {
   // Update toggle button
   document.getElementById('lang-toggle').querySelector('.lang-label').textContent = t('langBtn');
   document.documentElement.lang = currentLang === 'zh' ? 'zh-CN' : 'en';
+
+  // Swap Chinese chart sections vs English chart section
+  const isEN = currentLang === 'en';
+  document.querySelectorAll('.home-devchart').forEach(el => {
+    el.style.display = isEN ? 'none' : '';
+  });
+  const devfw = document.querySelector('.home-devfw');
+  if (devfw) devfw.style.display = isEN ? '' : 'none';
 
   // Re-render dynamic content if visible
   const curView = document.querySelector('.view.active');
